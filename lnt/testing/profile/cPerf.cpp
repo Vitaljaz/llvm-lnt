@@ -71,10 +71,13 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#ifdef __linux__
 #include <sys/mman.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#elif _WIN32
+#endif
 #include <vector>
 
 //===----------------------------------------------------------------------===//
